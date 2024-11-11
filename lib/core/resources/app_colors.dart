@@ -32,6 +32,7 @@ class AppColors {
   static const Color statusGray = Color(0xFF787878);
   static const Color statusRed = Color(0xFFB81F44);
 
+  static const Color tealSplash  = Color(0xFF0C8A7B);
   static const Color white = Color(0xFFFFFFFF);
   static const Color accent = Color(0xFF0971CD);
   static const Color textStyle = Color(0xFF64748B);
@@ -39,9 +40,9 @@ class AppColors {
   static const Color textSearchColor = Color(0xFF787878);
   static const Color textStyleHome = Color(0xFF1B1E28);
 
-  // TextField
-  static const Color enabledTextField = Color(0xFFE2E8F0);
-  static const Color hintTextField = Color(0xFF828A89);
+  // Text
+
+  static const Color slateGray = Color(0xFF828A89);
 
   // static const Color green = Color(0xFF00C088);
   static const Color pink = Color(0xFFFE5D5A);
@@ -59,6 +60,7 @@ class AppColors {
   static const Color black = Color(0xFF000000);
   static const Color purple = Color(0xFF4A2E77);
   static const Color grey = Colors.grey;
+  static const Color paleBlue = Color(0xFFBDD3D0);
   static const Color greyHeader = Color(0xFFCCDAF0);
   static const Color greyShade = Color(0xFF7a7a7a);
   static const Color greyShade350 = Color(0xFFD6D6D6);
@@ -78,7 +80,7 @@ class AppColors {
   static const Color chartBar3 = Color(0xFFFFA84A);
 
   /// light theme colors
-  static const Color mainLight = Color(0xFFF1F5F8);
+  static const Color mainLight = Color(0xFFF9F9F9);
   static const Color secondLight = Color(0xFFD15E59);
 
   // static const Color secondOpacity = Color(0xFFf3d5d4);
@@ -87,7 +89,7 @@ class AppColors {
   static const Color thirdLight = Color(0xFFECF5FF);
 
   /// dark theme colors
-  static const Color mainDark = Color(0xFF2A3457);
+  static const Color mainDark = Color(0xFF090C0B);
   static const Color secondDark = Color(0xFF313D67);
   static const Color buttonDark = Color(0xFF174272);
 

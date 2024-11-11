@@ -1,5 +1,9 @@
+
+import 'package:furniture_app/modules/auth/login/binding/login_binding.dart';
+import 'package:furniture_app/modules/auth/login/view/login_view.dart';
 import 'package:get/get.dart';
-import '../global_widgets/qr/mobile_scanner_widger.dart';
+import '../modules/onboard/binding/onboard_binding.dart';
+import '../modules/onboard/view/onboard_view.dart';
 import '../modules/splash/binding/splash_binding.dart';
 import '../modules/splash/view/splash_view.dart';
 
@@ -19,11 +23,18 @@ class AppPages {
       binding: SplashBinding(),
     ),
 
+    GetPage(
+      name: OnBoardView.route,
+      page: () => const OnBoardView(),
+      binding: OnboardBinding(),
+    ),
 
-  GetPage(
-      name: MobileScannerWidget.route,
-      page: () => const MobileScannerWidget(),
 
+
+    GetPage(
+      name: LoginView.route,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
     ),
 
   ];

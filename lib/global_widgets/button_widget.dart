@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_app/global_widgets/ui_helpers.dart%20';
@@ -6,7 +5,7 @@ import 'package:furniture_app/global_widgets/ui_helpers.dart%20';
 import '../core/resources/app_colors.dart';
 import '../core/resources/app_styles.dart';
 
-class ButtonWidget extends StatelessWidget {
+class ButtonWidget extends StatefulWidget {
   const ButtonWidget(
       {super.key,
       required this.title,
@@ -32,27 +31,32 @@ class ButtonWidget extends StatelessWidget {
   final Color? color;
 
   @override
+  State<ButtonWidget> createState() => _ButtonWidgetState();
+}
+
+class _ButtonWidgetState extends State<ButtonWidget> {
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: widget.onTap,
       child: Container(
-        width: width ?? double.infinity,
-        height: height ?? 56.h,
+        width: widget.width ?? double.infinity,
+        height: widget.height ?? 56.h,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            color: color ?? AppColors.blue,
-            borderRadius: BorderRadius.circular(circular)),
+            color: widget.color ?? AppColors.blue,
+            borderRadius: BorderRadius.circular(widget.circular)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (!isRight) icon ?? const SizedBox(),
+            if (!widget.isRight) widget.icon ?? const SizedBox(),
             Text(
-              title,
-              style: style ??
+              widget.title,
+              style: widget.style ??
                   getBoldStyle(color: AppColors.white, fontSize: 16.sp),
             ),
-            UiHelper.horizontalSpace(horizontalSpace ?? 8.w),
-            if (isRight) icon ?? const SizedBox(),
+            UiHelper.horizontalSpace(widget.horizontalSpace ?? 8.w),
+            if (widget.isRight) widget.icon ?? const SizedBox(),
           ],
         ),
       ),

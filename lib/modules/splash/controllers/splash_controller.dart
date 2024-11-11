@@ -2,6 +2,7 @@
 import 'package:get/get.dart';
 
 import '../../../data/base_controllers/base_controller.dart';
+import '../../onboard/view/onboard_view.dart';
 
 class SplashController extends BaseController {
   /// general variables
@@ -27,7 +28,7 @@ class SplashController extends BaseController {
       //
       //   return;
       // }
-      // Get.offAllNamed(DisplayProductView.route);
+       Get.offAllNamed(OnBoardView.route);
     });
   }
 }

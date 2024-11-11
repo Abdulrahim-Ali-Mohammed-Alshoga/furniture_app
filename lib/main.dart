@@ -20,9 +20,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
  // await Upgrader.clearSavedSettings();
   HttpOverrides.global = MyHttpOverrides();
-
-
-
   Get.put(ConnectivityController(), permanent: true);
   Get.put(SettingsService(), permanent: true);
   Get.put(TranslationService(), permanent: true);
