@@ -113,7 +113,7 @@ class _OnBoardViewState extends State<OnBoardView> {
                   : ActionButton(
                       width: double.infinity,
                       height: AppSize.s60.h,
-                      onPressed: () {},
+                      onPressed: () => controller.goLoginView() ,
                       fontSize: 16.sp,
                       backgroundColor: AppColors.tealSplash,
                       text: AppStrings.getStarted.tr,

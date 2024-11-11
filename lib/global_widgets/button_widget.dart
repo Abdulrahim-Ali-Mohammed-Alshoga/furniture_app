@@ -53,7 +53,7 @@ class _ButtonWidgetState extends State<ButtonWidget> {
             Text(
               widget.title,
               style: widget.style ??
-                  getBoldStyle(color: AppColors.white, fontSize: 16.sp),
+                  getMediumStyle(color: AppColors.white, fontSize: 16.sp),
             ),
             UiHelper.horizontalSpace(widget.horizontalSpace ?? 8.w),
             if (widget.isRight) widget.icon ?? const SizedBox(),

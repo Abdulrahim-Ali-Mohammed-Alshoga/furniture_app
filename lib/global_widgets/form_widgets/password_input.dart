@@ -186,14 +186,7 @@ class _PasswordInputState extends State<PasswordInput> {
               ? const Icon(Icons.visibility_off)
               : const Icon(Icons.visibility),
         ),
-        prefixIcon: widget.prefixIcon ??   Padding(
-      padding: EdgeInsets.only(left: 24.w, right: 12.w),
-      child: Icon(
-        Icons.lock_outline,
-        color: AppColors.blue,
-        size: 22.h,
-      ),
-    ),
+        prefixIcon: widget.prefixIcon        ,
         filled: widget.isFill,
         isDense: true,
         focusedBorder: widget.inputBorder ??
