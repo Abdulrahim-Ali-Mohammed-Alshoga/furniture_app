@@ -41,11 +41,11 @@ class _AppBarWidgetState extends State<AppBarWidget> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.white,
-      surfaceTintColor: Colors.transparent ,
-      elevation: 2.5,
+
+    //  surfaceTintColor: Colors.transparent ,
+       elevation: 0,
       // forceMaterialTransparency: true,
-      shadowColor: AppColors.grey,
+      //shadowColor: AppColors.grey,
       actions: isSearch || !widget.isIcon
           ? null
           : [

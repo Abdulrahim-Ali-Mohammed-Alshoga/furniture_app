@@ -7,12 +7,13 @@ class AutoSizedTextWidget extends StatefulWidget {
   final int maxLines;
   final TextAlign? textAlign;
   final TextStyle? style;
+  final FontWeight? fontWeight;
   const AutoSizedTextWidget({
 
     required this.text,
     this.maxFontSize = 24.0,
     this.maxLines = 3,
-    super.key, this.style, this.textAlign,
+    super.key, this.style, this.textAlign, this.fontWeight,
   });
 
   @override
@@ -34,16 +35,16 @@ class _AutoSizedTextState extends State<AutoSizedTextWidget> {
       builder: (context, constraints) {
         // حساب الحجم المطلوب باستخدام TextPainter
         while (_doesTextExceedMaxLines(widget.text, fontSize, constraints.maxWidth-20.w)) {
-          print("55555");
+
           fontSize -= 1; // تصغير حجم النص حتى يناسب الحد الأقصى للأسطر
           if (fontSize < 8) break; // إيقاف التصغير إذا وصلنا إلى حجم صغير جدًا
         }
 
         return Text(
           widget.text,
-          style: TextStyle(fontSize: fontSize),
+          style: TextStyle(fontSize: fontSize,fontWeight: widget.fontWeight),
           maxLines: widget.maxLines,
-          textAlign: TextAlign.center,
+          textAlign: widget.textAlign,
         );
       },
     );

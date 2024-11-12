@@ -107,7 +107,11 @@ extension NonNullString on String? {
     }
   }
 }
-
+extension CurrencyFormatExtension on double {
+  String get toCurrencyString  {
+    return  '\$${toStringAsFixed(2)}';
+  }
+}
 extension NonNullInteger on int? {
   int get orZero  {
     if (this == null) {

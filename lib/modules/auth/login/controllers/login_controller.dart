@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/modules/favourite/view/favourite_view.dart';
 import 'package:get/get.dart';
 import '../../../../data/base_controllers/base_controller.dart';
+import '../../../profile/view/profile_view.dart';
 import '../repository/login_repository.dart';
 
-class LoginController extends BaseController with GetSingleTickerProviderStateMixin{
+class LoginController extends BaseController {
   /// general variables
   bool isCheck = false;
 
@@ -11,7 +13,7 @@ class LoginController extends BaseController with GetSingleTickerProviderStateMi
   TextEditingController passwordController = TextEditingController();
   TextEditingController emailController = TextEditingController();
 bool isSingIn=true;
-  late AnimationController animationController;
+
   @override
   void onInit() async {
     // TODO: implement onInit
@@ -19,10 +21,7 @@ bool isSingIn=true;
 
 
     super.onInit();
-    animationController = AnimationController(
-      duration: const Duration(milliseconds: 500),
-    vsync: this
-    );
+
   }
 
   changeCheck() {
@@ -40,7 +39,7 @@ bool isSingIn=true;
   goHomeView() {
     Get.focusScope?.unfocus();
     if (formKey.currentState?.validate() ?? false) {
-
+Get.offAllNamed(FavouriteView.route) ;
     } else {
       autoValidateMode = AutovalidateMode.onUserInteraction;
     }

@@ -33,7 +33,9 @@ class AppColors {
   static const Color statusRed = Color(0xFFB81F44);
 
   static const Color tealSplash  = Color(0xFF0C8A7B);
+  static const Color peachPrice  = Color(0xFFF2A666);
   static const Color white = Color(0xFFFFFFFF);
+  static const Color vividRed = Color(0xFFEA3549);
   static const Color accent = Color(0xFF0971CD);
   static const Color textStyle = Color(0xFF64748B);
   static const Color textStyle2 = Color(0xFF848A9C);

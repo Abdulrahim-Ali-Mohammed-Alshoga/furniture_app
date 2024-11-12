@@ -8,4 +8,15 @@ class AppImages {
   static const String onboardingThree= '${_imagesBasePath}onboard_3.png';
   static const String empty= '${_imagesBasePath}empty2.png';
   static const String wrong= '${_imagesBasePath}wrong.png';
+  static const String user= '${_imagesBasePath}user.png';
+  static const String iconUser= '${_imagesBasePath}user-circle.png';
+  static const String wallet= '${_imagesBasePath}wallet.png';
+  static const String archive= '${_imagesBasePath}archive.png';
+  static const String  airPlane = '${_imagesBasePath}delivery_air_plane.png';
+  static const String  alignCenter = '${_imagesBasePath}align_center.png';
+  static const String  security = '${_imagesBasePath}security.png';
+  static const String  chair1 = '${_imagesBasePath}chair1.png';
+  static const String  chair2 = '${_imagesBasePath}chair2.png';
+  static const String  chair3 = '${_imagesBasePath}chair3.png';
+  static const String  chair4 = '${_imagesBasePath}chair4.png';
 }
