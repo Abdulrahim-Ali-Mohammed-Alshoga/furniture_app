@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.6.6
   connectivity_plus: ^6.1.0
+  flutter_slidable: ^3.1.1
   flutter_screenutil: ^5.9.3
   form_builder_validators: ^11.0.0
   flutter_spinkit: ^5.2.1

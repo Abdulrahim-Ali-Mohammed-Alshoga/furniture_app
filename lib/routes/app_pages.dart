@@ -1,10 +1,12 @@
 import 'package:furniture_app/modules/auth/login/binding/login_binding.dart';
 import 'package:furniture_app/modules/auth/login/view/login_view.dart';
+import 'package:furniture_app/modules/notifications/view/notifications_view.dart';
 import 'package:furniture_app/modules/profile/binding/onboard_binding.dart';
 import 'package:furniture_app/modules/profile/view/profile_view.dart';
 import 'package:get/get.dart';
 import '../modules/favourite/binding/favourite_binding.dart';
 import '../modules/favourite/view/favourite_view.dart';
+import '../modules/notifications/binding/notifications_binding.dart';
 import '../modules/onboard/binding/onboard_binding.dart';
 import '../modules/onboard/view/onboard_view.dart';
 import '../modules/settings/binding/settings_binding.dart';
@@ -50,6 +52,10 @@ class AppPages {
       name: SettingsView.route,
       page: () => const SettingsView(),
       binding: SettingsBinding(),
+    ),GetPage(
+      name: NotificationsView.route,
+      page: () => const NotificationsView(),
+      binding: NotificationsBinding(),
     ),
   ];
 }

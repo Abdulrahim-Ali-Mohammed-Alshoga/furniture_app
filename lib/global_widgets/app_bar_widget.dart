@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniture_app/core/resources/app_values.dart';
-import 'package:furniture_app/global_widgets/qr/mobile_scanner_widger.dart';
-import 'package:furniture_app/global_widgets/ui_helpers.dart%20';
 import 'package:get/get.dart';
 
 import '../core/resources/app_colors.dart';
@@ -11,18 +9,14 @@ import '../core/resources/app_styles.dart';
 class AppBarWidget extends StatefulWidget implements PreferredSizeWidget {
   const AppBarWidget(
       {super.key,
-      this.isIcon = false,
+      this.isClear = false,
       required this.title,
       this.resultIconBack,
-      this.controller,
-      this.functionSearch,
-      this.functionClose,
-      this.functionSearchQr,
+      this.controller, 
       this.isIconBack = true});
 
-  final TextEditingController? controller;
-  final Function? functionSearch, functionClose, functionSearchQr;
-  final bool isIcon, isIconBack;
+  final TextEditingController? controller; 
+  final bool isClear, isIconBack;
   final String title;
   final Map<String, dynamic>? resultIconBack;
 
@@ -35,7 +29,7 @@ class AppBarWidget extends StatefulWidget implements PreferredSizeWidget {
 }
 
 class _AppBarWidgetState extends State<AppBarWidget> {
-  bool isSearch = false;
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +38,11 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       elevation: 0,
       // forceMaterialTransparency: true,
       //shadowColor: AppColors.grey,
-titleSpacing: 0,
+      titleSpacing: 0,
       title: Row(
         children: [
           Expanded(
-            child: !isSearch && widget.isIconBack
+            child:  widget.isIconBack
                 ? InkWell(
                     onTap: () => Get.back(result: widget.resultIconBack),
                     child: Align(
@@ -79,43 +73,18 @@ titleSpacing: 0,
               ),
             ),
           ),
-          Expanded(child: Row(
-            children: [
-          if(!(isSearch || !widget.isIcon))
-                ... [
-                GestureDetector(
-                  onTap: () => setState(() {
-                    isSearch = !isSearch;
-                  }),
-                  child: Icon(
-                    Icons.search,
-                    color: AppColors.black,
-                    size: 25.h,
-                  ),
-                ),
-                UiHelper.horizontalSpaceTiny,
-                GestureDetector(
-                  onTap: () async {
-                    String textQr;
-                    Get.toNamed(MobileScannerWidget.route)!.then(
-                          (value) async {
-                        if (await value['BarCodeValue'] != '-1') {
-                          textQr = value['BarCodeValue'];
-                          widget.functionSearchQr!(textQr);
-                        }
-                      },
-                    );
-                  },
-                  child: Icon(
-                    Icons.qr_code,
-                    color: AppColors.black,
-                    size: 25.h,
-                  ),
-                ),
-                UiHelper.horizontalSpaceSmall,
-              ],
-            ],
-          ))
+          Expanded(
+              child: Padding(
+                padding:   EdgeInsets.only(right: AppSize.s20.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                if ( widget.isClear ) ...[
+                        Text('Clear All',style: getRegularStyle(color: AppColors.slateGray,fontSize: 16),)
+                ],
+                            ],
+                          ),
+              ))
         ],
       ),
       automaticallyImplyLeading: false,

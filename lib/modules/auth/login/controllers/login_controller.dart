@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/modules/notifications/view/notifications_view.dart';
 import 'package:furniture_app/modules/profile/view/profile_view.dart';
 import 'package:get/get.dart';
 import '../../../../data/base_controllers/base_controller.dart';
@@ -38,7 +39,7 @@ bool isSingIn=true;
   goHomeView() {
     Get.focusScope?.unfocus();
     if (formKey.currentState?.validate() ?? false) {
-Get.offAllNamed(SettingsView.route) ;
+Get.offAllNamed(NotificationsView.route) ;
     } else {
       autoValidateMode = AutovalidateMode.onUserInteraction;
     }
