@@ -36,7 +36,7 @@ class FavouriteView extends StatelessWidget {
                 itemCount: controller.getFurnitureList.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: AppSize.s2,
-                    mainAxisExtent: AppSize.s250,
+                    mainAxisExtent: AppSize.s250.h,
                     mainAxisSpacing: AppSize.s16.h,
                     crossAxisSpacing: AppSize.s16.w),
                 itemBuilder: (BuildContext context, int index) {

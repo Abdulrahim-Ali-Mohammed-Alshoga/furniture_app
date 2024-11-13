@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/modules/favourite/view/favourite_view.dart';
+import 'package:furniture_app/modules/profile/view/profile_view.dart';
 import 'package:get/get.dart';
 import '../../../../data/base_controllers/base_controller.dart';
-import '../../../profile/view/profile_view.dart';
-import '../repository/login_repository.dart';
+import '../../../settings/view/settings_view.dart';
 
 class LoginController extends BaseController {
   /// general variables
@@ -39,7 +38,7 @@ bool isSingIn=true;
   goHomeView() {
     Get.focusScope?.unfocus();
     if (formKey.currentState?.validate() ?? false) {
-Get.offAllNamed(FavouriteView.route) ;
+Get.offAllNamed(SettingsView.route) ;
     } else {
       autoValidateMode = AutovalidateMode.onUserInteraction;
     }

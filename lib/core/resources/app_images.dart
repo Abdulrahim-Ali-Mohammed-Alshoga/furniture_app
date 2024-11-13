@@ -19,4 +19,8 @@ class AppImages {
   static const String  chair2 = '${_imagesBasePath}chair2.png';
   static const String  chair3 = '${_imagesBasePath}chair3.png';
   static const String  chair4 = '${_imagesBasePath}chair4.png';
+  static const String   power  = '${_imagesBasePath}power.png';
+  static const String  mailFast = '${_imagesBasePath}mail_fast.png';
+  static const String  mapLocation = '${_imagesBasePath}map_location.png';
+  static const String  notification = '${_imagesBasePath}notification.png';
 }

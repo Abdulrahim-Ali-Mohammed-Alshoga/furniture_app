@@ -7,8 +7,8 @@ import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/app_values.dart';
 import '../../../global_widgets/ui_helpers.dart ';
 
-class ListTileProfileWidget extends StatelessWidget {
-  const ListTileProfileWidget(
+class ListTileSettingsWidget extends StatelessWidget {
+  const ListTileSettingsWidget(
       {super.key, required this.iconImage, required this.title, this.subtitle});
 
   final String title, iconImage;
@@ -35,7 +35,7 @@ class ListTileProfileWidget extends StatelessWidget {
             UiHelper.horizontalSpace(AppSize.s12.w),
             Text(
               title,
-              style: getMediumStyle(color: AppColors.black, fontSize: 16),
+              style: getMediumStyle(color: AppColors.black, fontSize: AppFontSize.s16),
             ),
           ],
         ),
