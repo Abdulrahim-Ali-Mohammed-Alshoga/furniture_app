@@ -9,6 +9,8 @@ import '../modules/favourite/view/favourite_view.dart';
 import '../modules/notifications/binding/notifications_binding.dart';
 import '../modules/onboard/binding/onboard_binding.dart';
 import '../modules/onboard/view/onboard_view.dart';
+import '../modules/popular/binding/popular_binding.dart';
+import '../modules/popular/view/popular_view.dart';
 import '../modules/settings/binding/settings_binding.dart';
 import '../modules/settings/view/settings_view.dart';
 import '../modules/splash/binding/splash_binding.dart';
@@ -52,10 +54,16 @@ class AppPages {
       name: SettingsView.route,
       page: () => const SettingsView(),
       binding: SettingsBinding(),
-    ),GetPage(
+    ),
+    GetPage(
       name: NotificationsView.route,
       page: () => const NotificationsView(),
       binding: NotificationsBinding(),
+    ),
+    GetPage(
+      name: PopularView.route,
+      page: () => const PopularView(),
+      binding: PopularBinding(),
     ),
   ];
 }

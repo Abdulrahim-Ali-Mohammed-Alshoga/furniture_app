@@ -26,42 +26,35 @@ class NotificationsView extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: AppSize.s24.w),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    UiHelper.verticalSpaceLarge,
-                    UiHelper.verticalSpaceLarge,
-                    const ListTileNotificationsWidget(
-                        image: AppImages.chair2,
-                        title:
-                        'special offer on bean upto 46% off all the products',
-                        time: '10 minute ago')    ,
-                    UiHelper.verticalSpaceMedium,
-                    const ListTileNotificationsWidget(
-                      image: AppImages.chair4,
-                      title:
-                      'your order 3 summery green chair has been shipped!',
-                      time: '49 minute ago',
-                    )  ,
-                    UiHelper.verticalSpaceMedium,
-                    const ListTileNotificationsWidget(
-                      image: AppImages.chair1,
-                      title:
-                      'your order will be ship. once we get confirl address',
-                      time: '5 hours age',
-                    )   ,
-                    UiHelper.verticalSpaceMedium,
-                    const ListTileNotificationsWidget(
-                        image: AppImages.chair3,
-                        title:
-                        'new products you may like are available go and show now.',
-                        time: '8 days ago')     ,
-                    UiHelper.verticalSpaceMedium,
-                  ],
-                ),
+
+                UiHelper.verticalSpaceLarge,
+                const ListTileNotificationsWidget(
+                    image: AppImages.chair2,
+                    title:
+                    'special offer on bean upto 46% off all the products',
+                    time: '10 minute ago')    ,
+                UiHelper.verticalSpaceMedium,
+                const ListTileNotificationsWidget(
+                  image: AppImages.chair4,
+                  title:
+                  'your order 3 summery green chair has been shipped!',
+                  time: '49 minute ago',
+                )  ,
+                UiHelper.verticalSpaceMedium,
+                const ListTileNotificationsWidget(
+                  image: AppImages.chair1,
+                  title:
+                  'your order will be ship. once we get confirl address',
+                  time: '5 hours age',
+                )   ,
+                UiHelper.verticalSpaceMedium,
+                const ListTileNotificationsWidget(
+                    image: AppImages.chair3,
+                    title:
+                    'new products you may like are available go and show now.',
+                    time: '8 days ago')     ,
+                UiHelper.verticalSpaceMedium,
               ],
             ),
           ),

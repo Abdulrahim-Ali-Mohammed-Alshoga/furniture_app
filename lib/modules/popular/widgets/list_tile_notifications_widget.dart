@@ -15,9 +15,9 @@ class ListTileNotificationsWidget extends StatelessWidget {
       required this.image,
       required this.title,
       this.subtitle,
-      required this.time});
+      required this.price, required this.manufacturer});
 
-  final String title, image, time;
+  final String title,manufacturer, image, price;
   final Widget? subtitle;
 
   @override
@@ -69,17 +69,27 @@ class ListTileNotificationsWidget extends StatelessWidget {
               UiHelper.horizontalSpace(AppSize.s12.w),
               Expanded(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      title,
-                      style: getRegularStyle(
-                          color: AppColors.black, fontSize: AppFontSize.s14),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          style: getRegularStyle(
+                              color: AppColors.black, fontSize: AppFontSize.s14),
+                        ), Text(
+                          manufacturer,
+                          style: getRegularStyle(
+                              color: AppColors.slateGray, fontSize: AppFontSize.s14),
+                        ),
+                      ],
                     ),
                     Text(
-                      time,
+                      price,
                       style: getRegularStyle(
-                          color: AppColors.slateGray,
+                          color: AppColors.peachPrice,
                           fontSize: AppFontSize.s13),
                     ),
                   ],
