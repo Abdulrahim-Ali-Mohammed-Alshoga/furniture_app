@@ -1,8 +1,11 @@
+import 'package:furniture_app/modules/auth/forgot_password/binding/forgot_password_binding.dart';
+import 'package:furniture_app/modules/auth/forgot_password/view/forgot_password_view.dart';
 import 'package:furniture_app/modules/auth/login/binding/login_binding.dart';
 import 'package:furniture_app/modules/auth/login/view/login_view.dart';
 import 'package:furniture_app/modules/notifications/view/notifications_view.dart';
 import 'package:furniture_app/modules/profile/binding/onboard_binding.dart';
 import 'package:furniture_app/modules/profile/view/profile_view.dart';
+import 'package:furniture_app/modules/shopping/view/shopping_view.dart';
 import 'package:get/get.dart';
 import '../modules/favourite/binding/favourite_binding.dart';
 import '../modules/favourite/view/favourite_view.dart';
@@ -13,6 +16,7 @@ import '../modules/popular/binding/popular_binding.dart';
 import '../modules/popular/view/popular_view.dart';
 import '../modules/settings/binding/settings_binding.dart';
 import '../modules/settings/view/settings_view.dart';
+import '../modules/shopping/binding/shopping_binding.dart';
 import '../modules/splash/binding/splash_binding.dart';
 import '../modules/splash/view/splash_view.dart';
 
@@ -64,6 +68,17 @@ class AppPages {
       name: PopularView.route,
       page: () => const PopularView(),
       binding: PopularBinding(),
+    ),
+    GetPage(
+      name: ShoppingView.route,
+      page: () => const ShoppingView(),
+      binding:ShoppingBinding(),
+    ),
+
+    GetPage(
+      name: ForgotPasswordView.route,
+      page: () => const ForgotPasswordView(),
+      binding:ForgotPasswordBinding(),
     ),
   ];
 }

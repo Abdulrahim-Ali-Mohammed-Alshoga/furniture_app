@@ -27,4 +27,5 @@ class AppImages {
   static const String  mapLocation = '${_imagesBasePath}map_location.png';
   static const String  notification = '${_imagesBasePath}notification.png';
   static const String  iconDelete = '${_imagesBasePath}icon_delete.png';
+  static const String  groupShipping = '${_imagesBasePath}group.png';
 }

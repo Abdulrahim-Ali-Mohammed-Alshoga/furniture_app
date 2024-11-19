@@ -1,1 +1,1 @@
-class NotificationsRepository {}
+class PopularRepository {}

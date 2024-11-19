@@ -43,7 +43,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         children: [
           Expanded(
             child:  widget.isIconBack
-                ? InkWell(
+                ? GestureDetector(
                     onTap: () => Get.back(result: widget.resultIconBack),
                     child: Align(
                       alignment: Alignment.centerLeft,

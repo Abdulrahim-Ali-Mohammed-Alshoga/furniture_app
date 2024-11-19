@@ -4,7 +4,6 @@ import 'package:furniture_app/core/resources/app_values.dart';
 import 'package:furniture_app/core/utils/utils1/extensions.dart';
 import 'package:furniture_app/modules/popular/controllers/popular_controller.dart';
 import 'package:get/get.dart';
-import '../../../../core/resources/app_images.dart';
 import '../../../../global_widgets/app_bar_widget.dart';
 import '../../../global_widgets/ui_helpers.dart ';
 import '../widgets/list_tile_notifications_widget.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:furniture_app/core/resources/app_font.dart';
 import 'package:get/get.dart';
 import '../../../core/launguages_and_localization/app_strings.dart';
 import '../../../core/resources/app_colors.dart';
-import '../../../core/resources/app_font.dart';
 import '../../../core/resources/app_images.dart';
 import '../../../core/resources/app_styles.dart';
 import '../../../core/resources/app_time_constants.dart';
@@ -114,7 +114,7 @@ class _OnBoardViewState extends State<OnBoardView> {
                       width: double.infinity,
                       height: AppSize.s60.h,
                       onPressed: () => controller.goLoginView() ,
-                      fontSize: 16.sp,
+                      fontSize: AppFontSize.s16,
                       backgroundColor: AppColors.tealSplash,
                       text: AppStrings.getStarted.tr,
                     ),

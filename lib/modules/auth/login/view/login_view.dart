@@ -145,7 +145,7 @@ class LoginView extends StatelessWidget {
                                 ],
                               ),
                               GestureDetector(
-                                onTap: () => controller.goForgetPasswordView(),
+                                onTap: () => controller.goForgotPasswordView(),
                                 child: Text(
                                   'Forgot password',
                                   style: getRegularStyle(

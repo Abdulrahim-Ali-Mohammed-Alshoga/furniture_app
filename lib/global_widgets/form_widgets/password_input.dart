@@ -5,6 +5,7 @@ import 'package:form_builder_validators/form_builder_validators.dart';
 
 import '../../core/resources/app_colors.dart';
 import '../../core/resources/app_styles.dart';
+import '../../core/resources/app_values.dart';
 import '../ui_helpers.dart ';
 
 class PasswordInput extends StatefulWidget {
@@ -65,9 +66,22 @@ class _PasswordInputState extends State<PasswordInput> {
   Widget build(BuildContext context) {
     if (widget.isSignUp) {
       return Column(
+        crossAxisAlignment:  CrossAxisAlignment.start,
         children: <Widget>[
+          Text(
+            'Password',
+            style: getMediumStyle(
+                color: AppColors.black, fontSize: 13.sp),
+          ),
+          UiHelper.verticalSpace(AppSize.s8.h),
           buildTextFormField(),
           UiHelper.verticalSpaceMedium,
+          Text(
+            'Confirm Password',
+            style: getMediumStyle(
+                color: AppColors.black, fontSize: 13.sp),
+          ),
+          UiHelper.verticalSpace(AppSize.s8.h),
           buildConfirmPassword(),
         ],
       );
@@ -105,10 +119,7 @@ class _PasswordInputState extends State<PasswordInput> {
               ? const Icon(Icons.visibility_off)
               : const Icon(Icons.visibility),
         ),
-        prefixIcon: widget.prefixIcon ??
-            const Icon(
-              Icons.lock_outlined,
-            ),
+
         isDense: true,
         focusedBorder: widget.inputBorder ??
             OutlineInputBorder(
@@ -186,7 +197,7 @@ class _PasswordInputState extends State<PasswordInput> {
               ? const Icon(Icons.visibility_off)
               : const Icon(Icons.visibility),
         ),
-        prefixIcon: widget.prefixIcon        ,
+
         filled: widget.isFill,
         isDense: true,
         focusedBorder: widget.inputBorder ??
@@ -202,7 +213,7 @@ class _PasswordInputState extends State<PasswordInput> {
                 borderRadius:
                 BorderRadius.all(Radius.circular(widget.circular.r)),
                 borderSide: const BorderSide(
-                  color: AppColors.white,
+                  color:  AppColors.white,
                   width: 1,
                 )
 
