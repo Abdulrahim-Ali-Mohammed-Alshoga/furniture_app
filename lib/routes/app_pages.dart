@@ -3,6 +3,8 @@ import 'package:furniture_app/modules/auth/forgot_password/view/forgot_password_
 import 'package:furniture_app/modules/auth/login/binding/login_binding.dart';
 import 'package:furniture_app/modules/auth/login/view/login_view.dart';
 import 'package:furniture_app/modules/notifications/view/notifications_view.dart';
+import 'package:furniture_app/modules/payment/binding/payment_binding.dart';
+import 'package:furniture_app/modules/payment/view/payment_view.dart';
 import 'package:furniture_app/modules/profile/binding/onboard_binding.dart';
 import 'package:furniture_app/modules/profile/view/profile_view.dart';
 import 'package:furniture_app/modules/shopping/view/shopping_view.dart';
@@ -79,6 +81,10 @@ class AppPages {
       name: ForgotPasswordView.route,
       page: () => const ForgotPasswordView(),
       binding:ForgotPasswordBinding(),
+    ), GetPage(
+      name: PaymentView.route,
+      page: () => const PaymentView(),
+      binding:PaymentBinding(),
     ),
   ];
 }

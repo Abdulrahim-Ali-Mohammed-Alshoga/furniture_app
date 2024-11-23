@@ -36,7 +36,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
     return AppBar(
       //  surfaceTintColor: Colors.transparent ,
       elevation: 0,
-      // forceMaterialTransparency: true,
+       forceMaterialTransparency: true,
       //shadowColor: AppColors.grey,
       titleSpacing: 0,
       title: Row(

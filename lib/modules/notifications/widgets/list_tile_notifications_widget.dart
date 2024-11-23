@@ -82,6 +82,7 @@ class ListTileNotificationsWidget extends StatelessWidget {
                           color: AppColors.slateGray,
                           fontSize: AppFontSize.s13),
                     ),
+                    UiHelper.verticalSpaceMedium,
                   ],
                 ),
               ),

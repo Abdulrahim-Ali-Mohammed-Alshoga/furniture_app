@@ -36,14 +36,16 @@ class ShoppingController extends BaseController {
     quantity = List.filled(furnitureList.length, 1);
     calculateTotalPrice();
   }
+
   void calculateTotalPrice() {
     totalPrice = 0.0;
     for (int i = 0; i < furnitureList.length; i++) {
       totalPrice += furnitureList[i].price * quantity[i];
     }
-    totalPayment=totalPrice+shippingCost;
+    totalPayment = totalPrice + shippingCost;
     update();
   }
+
   lower(int index) {
     --quantity[index];
     calculateTotalPrice();
@@ -52,6 +54,5 @@ class ShoppingController extends BaseController {
   increases(int index) {
     ++quantity[index];
     calculateTotalPrice();
-
   }
 }

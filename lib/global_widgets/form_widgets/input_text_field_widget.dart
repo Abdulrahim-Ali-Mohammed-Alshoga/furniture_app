@@ -148,6 +148,8 @@ class _InputTextFieldWidgetState extends State<InputTextFieldWidget> {
             minLines: widget.minLine,
             maxLines: widget.maxLines,
             maxLength: widget.maxLength,
+
+
             enabled: widget.enabled,
             initialValue: widget.initialValue,
             autofocus: widget.autoFocus!,

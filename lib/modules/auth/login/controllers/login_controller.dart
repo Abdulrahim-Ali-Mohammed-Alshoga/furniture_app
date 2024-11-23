@@ -6,6 +6,7 @@ import 'package:furniture_app/modules/profile/view/profile_view.dart';
 import 'package:furniture_app/modules/shopping/view/shopping_view.dart';
 import 'package:get/get.dart';
 import '../../../../data/base_controllers/base_controller.dart';
+import '../../../payment/view/payment_view.dart';
 import '../../../settings/view/settings_view.dart';
 
 class LoginController extends BaseController {
@@ -39,7 +40,7 @@ class LoginController extends BaseController {
   goHomeView() {
     Get.focusScope?.unfocus();
     if (formKey.currentState?.validate() ?? false) {
-      Get.offAllNamed(ShoppingView.route);
+      Get.offAllNamed(PaymentView.route);
     } else {
       autoValidateMode = AutovalidateMode.onUserInteraction;
     }

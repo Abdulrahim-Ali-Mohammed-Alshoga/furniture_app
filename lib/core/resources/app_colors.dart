@@ -45,6 +45,7 @@ class AppColors {
   // Text
 
   static const Color slateGray = Color(0xFF828A89);
+  static const Color cadetBlue = Color(0xFF80A8B8);
   static const Color lightGray = Color(0xFFF0F0F2);
 
   // static const Color green = Color(0xFF00C088);

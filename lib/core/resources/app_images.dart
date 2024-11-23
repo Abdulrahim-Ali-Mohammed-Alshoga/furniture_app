@@ -28,4 +28,7 @@ class AppImages {
   static const String  notification = '${_imagesBasePath}notification.png';
   static const String  iconDelete = '${_imagesBasePath}icon_delete.png';
   static const String  groupShipping = '${_imagesBasePath}group.png';
+  static const String  payment = '${_imagesBasePath}payment.png';
+  static const String  payment2 = '${_imagesBasePath}payment2.png';
+  static const String  paymentApple = '${_imagesBasePath}payment_apple.png';
 }

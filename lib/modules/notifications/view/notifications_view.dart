@@ -27,34 +27,16 @@ class NotificationsView extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: AppSize.s24.w),
             child: Column(
               children: [
-
                 UiHelper.verticalSpaceLarge,
-                const ListTileNotificationsWidget(
-                    image: AppImages.chair2,
-                    title:
-                    'special offer on bean upto 46% off all the products',
-                    time: '10 minute ago')    ,
-                UiHelper.verticalSpaceMedium,
-                const ListTileNotificationsWidget(
-                  image: AppImages.chair4,
-                  title:
-                  'your order 3 summery green chair has been shipped!',
-                  time: '49 minute ago',
-                )  ,
-                UiHelper.verticalSpaceMedium,
-                const ListTileNotificationsWidget(
-                  image: AppImages.chair1,
-                  title:
-                  'your order will be ship. once we get confirl address',
-                  time: '5 hours age',
-                )   ,
-                UiHelper.verticalSpaceMedium,
-                const ListTileNotificationsWidget(
-                    image: AppImages.chair3,
-                    title:
-                    'new products you may like are available go and show now.',
-                    time: '8 days ago')     ,
-                UiHelper.verticalSpaceMedium,
+                ListView.builder(
+                  itemBuilder: (context, index) {
+                    final notification = controller.notificationList[index];
+                    return ListTileNotificationsWidget(
+                        image: notification.image!,
+                        title: notification.title!,
+                        time: notification.time!);
+                  },
+                ),
               ],
             ),
           ),
