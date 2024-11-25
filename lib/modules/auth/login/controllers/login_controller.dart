@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/modules/auth/forgot_password/view/forgot_password_view.dart';
-import 'package:furniture_app/modules/notifications/view/notifications_view.dart';
-import 'package:furniture_app/modules/popular/view/popular_view.dart';
-import 'package:furniture_app/modules/profile/view/profile_view.dart';
-import 'package:furniture_app/modules/shopping/view/shopping_view.dart';
-import 'package:get/get.dart';
+ import 'package:get/get.dart';
 import '../../../../data/base_controllers/base_controller.dart';
+import '../../../bottom_nav_bar/view/bottom_nav_bar_view.dart';
 import '../../../payment/view/payment_view.dart';
 import '../../../settings/view/settings_view.dart';
 
@@ -40,7 +37,7 @@ class LoginController extends BaseController {
   goHomeView() {
     Get.focusScope?.unfocus();
     if (formKey.currentState?.validate() ?? false) {
-      Get.offAllNamed(PaymentView.route);
+      Get.offAllNamed(BottomNavBarView.route);
     } else {
       autoValidateMode = AutovalidateMode.onUserInteraction;
     }

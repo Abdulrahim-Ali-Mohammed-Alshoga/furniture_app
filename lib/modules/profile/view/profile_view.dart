@@ -21,8 +21,9 @@ class ProfileView extends StatelessWidget {
     return GetBuilder<ProfileController>(
       builder: (controller) => Scaffold(
         appBar: const AppBarWidget(
-          isIconBack: false,
+          isIconBack: true,
           title: 'Profile',
+
         ),
         body: LayoutBuilder(builder: (context, constraints) {
           return SingleChildScrollView(

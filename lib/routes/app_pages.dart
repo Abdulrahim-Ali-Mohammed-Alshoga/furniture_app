@@ -9,6 +9,8 @@ import 'package:furniture_app/modules/profile/binding/onboard_binding.dart';
 import 'package:furniture_app/modules/profile/view/profile_view.dart';
 import 'package:furniture_app/modules/shopping/view/shopping_view.dart';
 import 'package:get/get.dart';
+import '../modules/bottom_nav_bar/binding/bottom_nav_bar_binding.dart';
+import '../modules/bottom_nav_bar/view/bottom_nav_bar_view.dart';
 import '../modules/favourite/binding/favourite_binding.dart';
 import '../modules/favourite/view/favourite_view.dart';
 import '../modules/notifications/binding/notifications_binding.dart';
@@ -85,6 +87,10 @@ class AppPages {
       name: PaymentView.route,
       page: () => const PaymentView(),
       binding:PaymentBinding(),
+    ), GetPage(
+      name:  BottomNavBarView.route,
+      page: () => const  BottomNavBarView(),
+      binding: BottomNavBarBinding(),
     ),
   ];
 }

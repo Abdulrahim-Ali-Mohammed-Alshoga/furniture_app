@@ -31,4 +31,9 @@ class AppImages {
   static const String  payment = '${_imagesBasePath}payment.png';
   static const String  payment2 = '${_imagesBasePath}payment2.png';
   static const String  paymentApple = '${_imagesBasePath}payment_apple.png';
+  static const String  eye = '${_imagesBasePath}eye.png';
+  static const String  userIcon = '${_imagesBasePath}user_icon.png';
+  static const String  home = '${_imagesBasePath}home.png';
+  static const String  heart = '${_imagesBasePath}heart.png';
+  static const String  cart = '${_imagesBasePath}cart.png';
 }
